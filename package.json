@@ -1,0 +1,23 @@
+{
+  "name": "kuzadada-website",
+  "version": "1.0.0",
+  "description": "KuzaDada website - Empowering Girls Through Digital Transformation",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve",
+    "build": "echo 'No build step required'"
+  },
+  "keywords": [
+    "kuzadada",
+    "mentorship",
+    "education",
+    "women empowerment",
+    "STEM"
+  ],
+  "author": "Michael Musembi",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+} 
