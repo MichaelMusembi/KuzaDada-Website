@@ -1,0 +1,1412 @@
+/* ==================== GLOBAL STYLES ==================== */
+:root {
+    /* Main color palette - blue theme representing trust and empowerment */
+    --primary-color: #0057b8;
+    --primary-light: #3a7fce;
+    --primary-dark: #00408a;
+    --secondary-color: #ff6b6b;
+    --accent-color: #ffd166;
+    --text-dark: #333333;
+    --text-light: #666666;
+    --text-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --border-color: #e1e1e1;
+    --success-color: #28a745;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: var(--text-white);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-light);
+    color: var(--text-white);
+    border-color: var(--primary-light);
+}
+
+/* ==================== HEADER & NAVIGATION ==================== */
+header {
+    background-color: var(--bg-white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+    color: var(--primary-color);
+}
+
+.logo .tagline {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--text-dark);
+    font-weight: 500;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a.btn-primary {
+    padding: 8px 15px;
+}
+
+nav ul li a.btn-primary::after {
+    display: none;
+}
+
+.mobile-menu-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+    padding: 9rem 0 5rem;
+    background-color: var(--bg-white);
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+/* ==================== STATS SECTION ==================== */
+.stats {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    padding: 3rem 0;
+}
+
+.stats .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.stat-item {
+    flex: 1;
+}
+
+.stat-item h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+.stat-item p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* ==================== ABOUT SECTION ==================== */
+.about {
+    padding: 5rem 0;
+    background-color: var(--bg-light);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* ==================== PROGRAMS SECTION ==================== */
+.programs {
+    padding: 5rem 0;
+    background-color: var(--bg-white);
+}
+
+.program-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.program-card {
+    flex: 1;
+    background-color: var(--bg-light);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-icon i {
+    font-size: 1.5rem;
+    color: var(--text-white);
+}
+
+.program-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.program-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.card-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+}
+
+.card-link i {
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+.card-link:hover i {
+    transform: translateX(5px);
+}
+
+/* ==================== MENTORSHIP SECTION ==================== */
+.mentorship {
+    padding: 5rem 0;
+    background-color: var(--bg-light);
+}
+
+.mentorship-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.mentorship-text {
+    flex: 1;
+}
+
+.mentorship-text h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.mentorship-features {
+    margin-bottom: 2rem;
+}
+
+.mentorship-features li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.mentorship-features li i {
+    color: var(--success-color);
+    margin-right: 10px;
+}
+
+.mentorship-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+/* ==================== RESOURCES SECTION ==================== */
+.resources {
+    padding: 5rem 0;
+    background-color: var(--bg-white);
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.resource-item {
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.resource-item:hover {
+    transform: translateY(-10px);
+}
+
+.resource-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.resource-item h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+}
+
+.resource-item p {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+/* ==================== TESTIMONIALS SECTION ==================== */
+.testimonials {
+    padding: 5rem 0;
+    background-color: var(--bg-light);
+}
+
+.testimonials-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-card {
+    flex: 0 0 100%;
+    padding: 2rem;
+    background-color: var(--bg-white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.testimonial-content {
+    margin-bottom: 1.5rem;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-author img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.author-info h4 {
+    margin-bottom: 0.3rem;
+    color: var(--primary-dark);
+}
+
+.author-info p {
+    margin-bottom: 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+}
+
+/* ==================== CALL TO ACTION SECTION ==================== */
+.cta {
+    padding: 5rem 0;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-white);
+}
+
+.cta p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: var(--bg-light);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.cta .btn-secondary {
+    border-color: var(--text-white);
+    color: var(--text-white);
+}
+
+.cta .btn-secondary:hover {
+    background-color: var(--text-white);
+    color: var(--primary-color);
+}
+
+/* ==================== CONTACT SECTION ==================== */
+.contact {
+    padding: 5rem 0;
+    background-color: var(--bg-white);
+}
+
+.contact-content {
+    display: flex;
+    gap: 3rem;
+}
+
+.contact-form, .contact-info {
+    flex: 1;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.info-item .icon {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.info-item .icon i {
+    color: var(--text-white);
+    font-size: 1.2rem;
+}
+
+.info-text h4 {
+    margin-bottom: 0.3rem;
+    color: var(--primary-dark);
+}
+
+.info-text p {
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--text-white);
+    padding: 4rem 0 1rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.footer-logo h2 {
+    color: var(--text-white);
+    margin-bottom: 1rem;
+}
+
+.footer-logo p {
+    color: var(--bg-light);
+    opacity: 0.8;
+}
+
+.footer-links {
+    display: flex;
+    gap: 3rem;
+}
+
+.footer-column h3 {
+    color: var(--text-white);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column ul li a {
+    color: var(--bg-light);
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.footer-column ul li a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    margin-bottom: 0;
+    color: var(--bg-light);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+    color: var(--bg-light);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.footer-bottom-links a:hover {
+    opacity: 1;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .program-cards, 
+    .about-content, 
+    .mentorship-content, 
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .about-image, 
+    .mentorship-image {
+        order: -1;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero .container {
+        flex-direction: column;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .stats .container {
+        flex-wrap: wrap;
+    }
+    
+    .stat-item {
+        flex: 0 0 50%;
+        margin-bottom: 1.5rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    html {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 7rem 0 3rem;
+    }
+
+    .about, 
+    .programs, 
+    .mentorship, 
+    .resources, 
+    .testimonials, 
+    .cta, 
+    .contact {
+        padding: 3rem 0;
+    }
+
+    .section-header {
+        margin-bottom: 2rem;
+    }
+
+    .stat-item {
+        flex: 0 0 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+/* ==================== PROGRAM DETAIL PAGES ==================== */
+
+/* Program Header */
+.program-header {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    text-align: center;
+    padding: 8rem 0 4rem;
+}
+
+.program-header .program-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.program-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.program-header .program-tagline {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Program Overview */
+.program-overview {
+    padding: 5rem 0;
+    background-color: var(--bg-light);
+}
+
+.overview-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.overview-image {
+    flex: 1;
+}
+
+.overview-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.overview-text {
+    flex: 1;
+}
+
+.overview-text h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.overview-text p {
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+.program-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Curriculum Section */
+.program-curriculum {
+    padding: 5rem 0;
+    background-color: var(--bg-white);
+}
+
+.curriculum-tracks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.track-card {
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.track-card:hover {
+    transform: translateY(-5px);
+}
+
+.track-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.track-header i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 1rem;
+}
+
+.track-header h3 {
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+}
+
+.track-courses {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.track-courses li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.track-courses li:last-child {
+    border-bottom: none;
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--text-white);
+}
+
+/* Program Features */
+.program-features {
+    padding: 5rem 0;
+    background-color: var(--bg-light);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-item {
+    background-color: var(--bg-white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 87, 184, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.feature-icon i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.feature-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.feature-item p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Leadership Tracks */
+.leadership-tracks {
+    padding: 5rem 0;
+    background-color: var(--bg-white);
+}
+
+.tracks-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.track-box {
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.track-box:hover {
+    transform: translateY(-5px);
+}
+
+.track-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 87, 184, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.track-icon i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.track-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+}
+
+.track-age {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.track-box p {
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.track-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.track-highlights li {
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.track-highlights li:before {
+    content: "\f00c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Success Stories */
+.success-stories {
+    padding: 5rem 0;
+    background-color: var(--bg-light);
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.story-card {
+    background-color: var(--bg-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+}
+
+.story-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.story-card h3 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+    margin: 0;
+}
+
+.story-role {
+    padding: 0 1.5rem 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin: 0;
+}
+
+.story-card p:last-child {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.story-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Upcoming Events/Workshops */
+.upcoming-events,
+.upcoming-workshops {
+    padding: 5rem 0;
+    background-color: var(--bg-white);
+}
+
+.events-list,
+.workshops-list {
+    margin-top: 3rem;
+}
+
+.event-item,
+.workshop-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.event-item:hover,
+.workshop-item:hover {
+    transform: translateY(-5px);
+}
+
+.event-date,
+.workshop-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    padding: 1.5rem;
+}
+
+.event-date .month,
+.workshop-date .month {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.event-date .day,
+.workshop-date .day {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.event-info,
+.workshop-info {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.event-info h3,
+.workshop-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+}
+
+.event-meta,
+.workshop-meta {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.event-meta i,
+.workshop-meta i {
+    margin-right: 0.3rem;
+    color: var(--primary-color);
+}
+
+.event-info p,
+.workshop-info p {
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.events-cta,
+.workshops-cta {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Program CTA */
+.program-cta {
+    padding: 5rem 0;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    text-align: center;
+}
+
+.program-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.program-cta p {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.program-cta .btn-secondary {
+    border-color: var(--text-white);
+    color: var(--text-white);
+}
+
+.program-cta .btn-secondary:hover {
+    background-color: var(--text-white);
+    color: var(--primary-color);
+}
+
+/* Responsive Styles for Program Pages */
+@media (max-width: 992px) {
+    .overview-content {
+        flex-direction: column;
+    }
+    
+    .program-stats {
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .program-header {
+        padding: 7rem 0 3rem;
+    }
+    
+    .program-header h1 {
+        font-size: 2rem;
+    }
+    
+    .program-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .event-item,
+    .workshop-item {
+        flex-direction: column;
+    }
+    
+    .event-date,
+    .workshop-date {
+        flex-direction: row;
+        width: 100%;
+        min-width: auto;
+        padding: 1rem;
+    }
+    
+    .event-date .month,
+    .workshop-date .month {
+        margin-right: 0.5rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .program-header .program-icon {
+        font-size: 2.5rem;
+    }
+    
+    .program-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .program-header .program-tagline {
+        font-size: 1rem;
+    }
+    
+    .feature-item,
+    .track-box,
+    .story-card {
+        padding: 1.5rem;
+    }
+    
+    .feature-icon,
+    .track-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .feature-icon i,
+    .track-icon i {
+        font-size: 1.2rem;
+    }
+} 

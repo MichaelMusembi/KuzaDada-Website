@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Mentor - KuzaDada</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/forms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <h1>KuzaDada</h1>
+                    <p class="tagline">Empowering Girls Through Digital Transformation</p>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#programs">Programs</a></li>
+                    <li><a href="../index.html#mentorship">Mentorship</a></li>
+                    <li><a href="../index.html#resources">Resources</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li><a href="#login" class="btn-primary">Login</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Application Form Section -->
+    <section class="application-form">
+        <div class="container">
+            <div class="section-header">
+                <h2>Become a Mentor</h2>
+                <p>Share your knowledge and experience to empower the next generation of female leaders</p>
+            </div>
+            
+            <div class="application-content">
+                <div class="form-container">
+                    <form id="mentorForm">
+                        <div class="form-section">
+                            <h3>Personal Information</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name <span class="required">*</span></label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="lastName">Last Name <span class="required">*</span></label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Phone Number <span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="country">Country of Residence <span class="required">*</span></label>
+                                <select id="country" name="country" required>
+                                    <option value="" disabled selected>Select your country</option>
+                                    <option value="kenya">Kenya</option>
+                                    <option value="uganda">Uganda</option>
+                                    <option value="tanzania">Tanzania</option>
+                                    <option value="rwanda">Rwanda</option>
+                                    <option value="ethiopia">Ethiopia</option>
+                                    <option value="nigeria">Nigeria</option>
+                                    <option value="ghana">Ghana</option>
+                                    <option value="southAfrica">South Africa</option>
+                                    <option value="usa">United States</option>
+                                    <option value="uk">United Kingdom</option>
+                                    <option value="canada">Canada</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="otherCountry">If 'Other', please specify:</label>
+                                <input type="text" id="otherCountry" name="otherCountry">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="gender">Gender <span class="required">*</span></label>
+                                <select id="gender" name="gender" required>
+                                    <option value="" disabled selected>Select your gender</option>
+                                    <option value="female">Female</option>
+                                    <option value="male">Male</option>
+                                    <option value="nonBinary">Non-binary</option>
+                                    <option value="preferNotToSay">Prefer not to say</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="languages">Languages Spoken <span class="required">*</span></label>
+                                <input type="text" id="languages" name="languages" placeholder="e.g., English, Swahili, French" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Professional Background</h3>
+                            
+                            <div class="form-group">
+                                <label for="profession">Current Profession <span class="required">*</span></label>
+                                <input type="text" id="profession" name="profession" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company/Organization <span class="required">*</span></label>
+                                <input type="text" id="company" name="company" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="jobTitle">Job Title <span class="required">*</span></label>
+                                <input type="text" id="jobTitle" name="jobTitle" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="yearsExperience">Years of Professional Experience <span class="required">*</span></label>
+                                <select id="yearsExperience" name="yearsExperience" required>
+                                    <option value="" disabled selected>Select years of experience</option>
+                                    <option value="1-3">1-3 years</option>
+                                    <option value="4-6">4-6 years</option>
+                                    <option value="7-10">7-10 years</option>
+                                    <option value="11-15">11-15 years</option>
+                                    <option value="16+">16+ years</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="education">Highest Level of Education <span class="required">*</span></label>
+                                <select id="education" name="education" required>
+                                    <option value="" disabled selected>Select education level</option>
+                                    <option value="highSchool">High School</option>
+                                    <option value="associate">Associate Degree</option>
+                                    <option value="bachelor">Bachelor's Degree</option>
+                                    <option value="master">Master's Degree</option>
+                                    <option value="doctorate">Doctorate</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="expertise">Areas of Expertise (select up to 3) <span class="required">*</span></label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="stem" name="expertise" value="stem">
+                                        <label for="stem">STEM</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="business" name="expertise" value="business">
+                                        <label for="business">Business & Entrepreneurship</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="arts" name="expertise" value="arts">
+                                        <label for="arts">Arts & Culture</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="healthcare" name="expertise" value="healthcare">
+                                        <label for="healthcare">Healthcare & Medicine</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="education" name="expertise" value="education">
+                                        <label for="education">Education</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="leadership" name="expertise" value="leadership">
+                                        <label for="leadership">Leadership & Management</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="technology" name="expertise" value="technology">
+                                        <label for="technology">Technology & Digital Media</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="finance" name="expertise" value="finance">
+                                        <label for="finance">Finance & Economics</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="linkedin">LinkedIn Profile (optional)</label>
+                                <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/yourprofile">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="resume">Upload Resume/CV <span class="required">*</span></label>
+                                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                                <span class="file-hint">Maximum file size: 5MB. Accepted formats: PDF, DOC, DOCX</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Mentoring Preferences</h3>
+                            
+                            <div class="form-group">
+                                <label for="mentorshipReason">Why do you want to be a mentor? <span class="required">*</span></label>
+                                <textarea id="mentorshipReason" name="mentorshipReason" rows="4" required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mentorshipExperience">Do you have any previous mentoring experience? If yes, please describe.</label>
+                                <textarea id="mentorshipExperience" name="mentorshipExperience" rows="4"></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="menteeCount">Number of mentees you can take on <span class="required">*</span></label>
+                                <select id="menteeCount" name="menteeCount" required>
+                                    <option value="" disabled selected>Select number of mentees</option>
+                                    <option value="1">1 mentee</option>
+                                    <option value="2">2 mentees</option>
+                                    <option value="3">3 mentees</option>
+                                    <option value="4+">4 or more mentees</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="commitment">Time commitment per week you can dedicate to mentorship <span class="required">*</span></label>
+                                <select id="commitment" name="commitment" required>
+                                    <option value="" disabled selected>Select time commitment</option>
+                                    <option value="1-2">1-2 hours</option>
+                                    <option value="3-4">3-4 hours</option>
+                                    <option value="5-6">5-6 hours</option>
+                                    <option value="7+">7+ hours</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="availability">Availability for Mentorship Sessions <span class="required">*</span></label>
+                                <div class="checkbox-group">
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="weekdayMornings" name="availability" value="weekdayMornings">
+                                        <label for="weekdayMornings">Weekday Mornings</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="weekdayAfternoons" name="availability" value="weekdayAfternoons">
+                                        <label for="weekdayAfternoons">Weekday Afternoons</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="weekdayEvenings" name="availability" value="weekdayEvenings">
+                                        <label for="weekdayEvenings">Weekday Evenings</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="weekendMornings" name="availability" value="weekendMornings">
+                                        <label for="weekendMornings">Weekend Mornings</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="weekendAfternoons" name="availability" value="weekendAfternoons">
+                                        <label for="weekendAfternoons">Weekend Afternoons</label>
+                                    </div>
+                                    <div class="checkbox-item">
+                                        <input type="checkbox" id="weekendEvenings" name="availability" value="weekendEvenings">
+                                        <label for="weekendEvenings">Weekend Evenings</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="preferredAge">Preferred Age Group of Mentees <span class="required">*</span></label>
+                                <select id="preferredAge" name="preferredAge" required>
+                                    <option value="" disabled selected>Select preferred age group</option>
+                                    <option value="13-15">13-15 years</option>
+                                    <option value="16-18">16-18 years</option>
+                                    <option value="19-22">19-22 years</option>
+                                    <option value="23-26">23-26 years</option>
+                                    <option value="anyAge">Any age group</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="approach">Briefly describe your mentoring approach <span class="required">*</span></label>
+                                <textarea id="approach" name="approach" rows="4" required></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Additional Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="heardFrom">How did you hear about our mentorship program? <span class="required">*</span></label>
+                                <select id="heardFrom" name="heardFrom" required>
+                                    <option value="" disabled selected>Select option</option>
+                                    <option value="website">KuzaDada Website</option>
+                                    <option value="socialMedia">Social Media</option>
+                                    <option value="friend">Friend or Colleague</option>
+                                    <option value="event">Event or Conference</option>
+                                    <option value="news">News or Press</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="otherHeardFrom">If 'Other', please specify:</label>
+                                <input type="text" id="otherHeardFrom" name="otherHeardFrom">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="additionalInfo">Any additional information you would like to share?</label>
+                                <textarea id="additionalInfo" name="additionalInfo" rows="4"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="form-section">
+                            <h3>Agreement</h3>
+                            
+                            <div class="form-group checkbox-single">
+                                <input type="checkbox" id="backgroundCheck" name="backgroundCheck" required>
+                                <label for="backgroundCheck">I consent to a background check as part of the mentor screening process <span class="required">*</span></label>
+                            </div>
+                            
+                            <div class="form-group checkbox-single">
+                                <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
+                                <label for="termsAgreement">I agree to the <a href="#" target="_blank">Terms & Conditions</a> of the KuzaDada Mentorship Program <span class="required">*</span></label>
+                            </div>
+                            
+                            <div class="form-group checkbox-single">
+                                <input type="checkbox" id="commitment" name="commitment" required>
+                                <label for="commitment">I understand that this mentorship program requires commitment and agree to actively participate for at least 6 months <span class="required">*</span></label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-action">
+                            <button type="submit" class="btn-primary">Submit Application</button>
+                            <button type="reset" class="btn-secondary">Clear Form</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="application-sidebar">
+                    <div class="sidebar-card">
+                        <h3>Why Become a Mentor?</h3>
+                        <ul class="benefits-list">
+                            <li><i class="fas fa-check-circle"></i> Make a positive impact in a young girl's life</li>
+                            <li><i class="fas fa-check-circle"></i> Develop your leadership and coaching skills</li>
+                            <li><i class="fas fa-check-circle"></i> Share your knowledge and experiences</li>
+                            <li><i class="fas fa-check-circle"></i> Expand your professional network</li>
+                            <li><i class="fas fa-check-circle"></i> Gain fresh perspectives and insights</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3>Mentor Requirements</h3>
+                        <ul class="requirements-list">
+                            <li><i class="fas fa-user-check"></i> At least 3 years of professional experience in your field</li>
+                            <li><i class="fas fa-clock"></i> Ability to commit 1-2 hours per week for at least 6 months</li>
+                            <li><i class="fas fa-comment"></i> Good communication and listening skills</li>
+                            <li><i class="fas fa-heart"></i> Passion for empowering and supporting young girls</li>
+                            <li><i class="fas fa-shield-alt"></i> Pass a background check</li>
+                            <li><i class="fas fa-graduation-cap"></i> Attend mentor training and orientation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3>Have Questions?</h3>
+                        <p>If you have any questions about becoming a mentor, please contact us:</p>
+                        <a href="mailto:mentors@kuzadada.org" class="contact-link"><i class="fas fa-envelope"></i> mentors@kuzadada.org</a>
+                        <a href="tel:+1234567890" class="contact-link"><i class="fas fa-phone"></i> +123 456 7890</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>KuzaDada</h2>
+                    <p>Empowering Girls Through Digital Transformation</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="../index.html#home">Home</a></li>
+                            <li><a href="../index.html#about">About</a></li>
+                            <li><a href="../index.html#programs">Programs</a></li>
+                            <li><a href="../index.html#mentorship">Mentorship</a></li>
+                            <li><a href="../index.html#resources">Resources</a></li>
+                            <li><a href="../index.html#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Programs</h3>
+                        <ul>
+                            <li><a href="#">STEM Education</a></li>
+                            <li><a href="#">Entrepreneurship</a></li>
+                            <li><a href="#">Leadership</a></li>
+                            <li><a href="#">Digital Literacy</a></li>
+                            <li><a href="#">Workshops</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Online Courses</a></li>
+                            <li><a href="#">Scholarships</a></li>
+                            <li><a href="#">Internships</a></li>
+                            <li><a href="#">Community Forums</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 KuzaDada. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/forms.js"></script>
+</body>
+</html> 
